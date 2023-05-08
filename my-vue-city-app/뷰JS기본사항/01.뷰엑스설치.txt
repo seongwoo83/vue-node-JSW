@@ -1,0 +1,12 @@
+​‌‌‍⁡⁢⁣⁣[ 01. 뷰엑스 설치하기 ]⁡​
+
+1. 기본 webpack에는 Vuex라이브러리가 설치되어 있지 않음
+2. Vue CLI로 설치명령어를 실행하여 설치 필요
+    ((기본 npm 설치 명령어))
+    npm install --save --force vuex@3 babel-polyfill
+    1) 기본 명령어 : npm install
+    2) --save : 설치레코드 저장
+    3) --force : 강제 설치(기존같은 종류가 설치된 것을 덮어쓸ㄸ대)
+    4) vuex@3 : vuex 설치시 3.x 버전으로 설함함
+    5) babel-polyfill : babel은 브라우저 호환성 때문에 설치함
+                                (오래된 브라우저도 최신 코드가 실행되도록 변환해줌)
