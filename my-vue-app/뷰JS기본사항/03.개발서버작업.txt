@@ -6,7 +6,7 @@
         npm run dev
     (3) 결과리턴:
         DONE  Compiled successfully in 3989ms 
-        I  Your application is running here: http://localhost:8080
+        Your application is running here: http://localhost:8080
     (4) 웹 브라우저 주소창에 localhost:8080 를 넣고 열어준다
     (5) 개발중 변경사항이 반영되는 개발창이다!
 
