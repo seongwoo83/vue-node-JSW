@@ -28,7 +28,7 @@ const store = new Vuex.Store({
         // 도시 데이터 셋업
         // 스프레드 연산자로 두개의 객체를 합친다
         // {...객체1, ...객체2}
-        cityData: {...myD0, ...myD1, ...myD2},
+        cityData: {...myD0, ...myD1},
         // 이미지정보 셋업변수
         imgsrc:"",
         // 도시설명정보 셋업변수
@@ -53,6 +53,11 @@ const store = new Vuex.Store({
             헐.imgsrc = 헐.cityData[슉].이미지;
             // 2. 도시설명 변수: desc
             헐.desc = 헐.cityData[슉].설명;
+        },
+        // 메뉴 데이터 변경 메서드
+        chgMenu(헐, 슉){
+            console.log("뮤테호출", 슉);
+            헐.cityData = 슉 == 1? {...헐, ...myD0,...myD1}: {...헐,...myD0,...myD2};
         }
     },
     // (3) 백엔드 관련 코딩 비동기처리 메서드 구역 : 호출시 dispatch()사용
