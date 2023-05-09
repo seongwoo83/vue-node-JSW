@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg : string }}</h1>
     <h2>추천 쇼핑몰 링크</h2>
     <ul>
       <li>
@@ -83,7 +83,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'HelloWorld',
   data () {
