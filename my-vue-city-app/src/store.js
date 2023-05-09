@@ -29,6 +29,12 @@ const store = new Vuex.Store({
         // 스프레드 연산자로 두개의 객체를 합친다
         // {...객체1, ...객체2}
         cityData: {...myD0, ...myD1},
+        // 변경되는 데이터는 state구역에 외부변수를 할당하여 변경시 가상DOM에 반영하여
+        //  실제 DOM으로 연결되도록 등록해준다.
+        // 이름은 같은 이름을 사용해도 무방함.
+        myD0 : myD0,
+        myD1 : myD1,
+        myD2 : myD2,
         // 이미지정보 셋업변수
         imgsrc:"",
         // 도시설명정보 셋업변수
@@ -56,8 +62,15 @@ const store = new Vuex.Store({
         },
         // 메뉴 데이터 변경 메서드
         chgMenu(헐, 슉){
-            console.log("뮤테호출", 슉);
-            헐.cityData = 슉 == 1? {...헐, ...myD0,...myD1}: {...헐,...myD0,...myD2};
+            헐.cityData = 
+            슉 == 1? 
+            {...헐.myD0,...헐.myD1} : 
+            {...헐.myD0,...헐.myD2};
+            console.log("뮤테호출", 슉, 헐.cityData);
+
+            // 메뉴 변경시 인트로화면으로 변경하기
+            헐.imgsrc = 헐.cityData.인트로.이미지;
+            헐.desc = 헐.cityData.인트로.설명;
         }
     },
     // (3) 백엔드 관련 코딩 비동기처리 메서드 구역 : 호출시 dispatch()사용

@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App";
 // 뷰엑스 스토어 JS 불러오기
-import store from "./store.js";
+import store from "./store";
 
 /* 뷰 인스턴스 생성하기 */
 new Vue({
@@ -24,7 +24,7 @@ new Vue({
     //   txt: "도시소개에 오신 것을 환영합니다."
     // });
     // actions메서드 호출하기: dispatch("메서드명", 전달변수)
-    // store.dispatch("myAct", "나야나");
+    store.dispatch("myAct", "나야나");
   }
   // 데이터 세팅은 언제 하면 좋을까?
   // created? mounted?
